@@ -3,8 +3,13 @@
 
 int main() {
     int data [] = {9, 8, 10, 6, 7};
-    int n = 5;
+    int n = sizeof(data) / sizeof(data[0]);
     int i, j, min, temp;
+
+    printf("Sebelum diururtkan: ");
+    for (i = 0; i < n; i++){
+        printf("%d ", data[i]);
+    }
 
     for (i = 0; i < n - 1; i++) {
         min = i;
@@ -20,7 +25,7 @@ int main() {
     data[min] = temp;
     }
 
-    printf("Hasil Pengurutan: ");
+    printf("Sesudah diurutkan: ");
     for (i = 0; i < n; i++) {
         printf("%d ", data[i]);
     }
